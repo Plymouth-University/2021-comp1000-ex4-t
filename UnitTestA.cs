@@ -20,7 +20,7 @@ namespace Exercise.Tests
         public void Test0(int[] a, string[] b)
         {
 
-            var outcome = prog.CreateDictionary(a, b);
+            var outcome = prog.BuildDictionary(a, b);
             Random rand = new Random();
 
             for (int i = 0; i < 3; i++)
@@ -43,7 +43,7 @@ namespace Exercise.Tests
         public void Test1(string[] a, string[] b, int c, int d, int e)
         {
 
-            var outcome = prog.CreateDictionary2(b, a);
+            var outcome = prog.BuildDictionaryBeta(b, a);
             Random rand = new Random();
 
             for (int i = 0; i < 3; i++)
@@ -105,7 +105,7 @@ namespace Exercise.Tests
                 dictionary.Add(values[i + 1], number);
             }
             var count = dictionary.Count;
-            var outcome = prog.WorkingWithDicts2(dictionary);
+            var outcome = prog.ModifyDictionaryBeta(dictionary);
             Assert.True(outcome.ContainsKey("sum"), "Missing key for the sum of the entries");
             Assert.True(outcome.ContainsKey("mult"), "Missing key for the product of the entries");
             Assert.True(outcome.ContainsKey("div"), "Missing key for the division result of the entries");
@@ -143,7 +143,7 @@ namespace Exercise.Tests
                 dictionary.Add(values[i + 1], number);
             }
             var count = dictionary.Count;
-            prog.WorkingWithDicts(dictionary, remove);
+            prog.ModifyDictionary(dictionary, remove);
             Assert.True(dictionary.ContainsKey("sum"), "Missing key for the sum of the entries");
             Assert.True(dictionary.ContainsKey("mult"), "Missing key for the product of the entries");
             Assert.True(dictionary.Count == count + 2 - neg, "The selected elements were not removed");
@@ -175,7 +175,7 @@ namespace Exercise.Tests
             }
 
 
-            List<double> results = prog.WorkingWithDicts3(dictionary, remove);
+            List<double> results = prog.ModifyDictionaryGamma(dictionary, remove);
             var count = results.Count;
             Assert.True(results[results.Count-2] == sum, "Sum calculation is wrong in the list");
             Assert.True(results[results.Count - 1] == mult, "The product is wrong in the list");

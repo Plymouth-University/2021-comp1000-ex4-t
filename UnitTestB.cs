@@ -27,7 +27,7 @@ namespace Exercise.Tests
         [Theory]
         [InlineData("files/file1.txt", 1, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis, ligula at hendrerit facilisis, eros risus dapibus dui, et volutpat dui nibh vel nisi. Morbi gravida sapien ac odio tincidunt tristique. Praesent tristique libero tristique tincidunt varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. ")]
         [InlineData("files/file2.map", 3, "Duis vel sagittis elit. Pellentesque et viverra nibh. Proin sed lectus justo. Aliquam volutpat laoreet nisi a placerat. Sed nulla erat, volutpat in dictum ac, pulvinar non enim. Mauris finibus lacus fermentum facilisis bibendum. Mauris dui tortor, vehicula eu libero condimentum, sodales volutpat sem. Nulla facilisi.")]
-        [InlineData("files/file2.map", 2, "")]
+        [InlineData("files/file2.map", 2, " ")]
         [InlineData("files/fil.map", 2, null)]
         [InlineData("filesa/file2.map", 5, null)]
         [InlineData("files/file2.map", 9, "Sed at maximus ipsum, sed faucibus risus. Aliquam ligula dui, semper in rhoncus vel, ornare a libero. Pellentesque sit amet felis ut libero aliquet tempor. Praesent lacinia metus in luctus vehicula. Donec massa quam, mattis vitae urna vel, blandit rhoncus nulla. Nunc volutpat libero sit amet risus consequat, eget fermentum justo bibendum. Donec at dignissim mauris, nec suscipit leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur et interdum est, porttitor tincidunt turpis. Nullam vulputate mauris in fringilla volutpat. Cras dapibus molestie libero. In eget bibendum augue, rhoncus pharetra nulla. Maecenas lorem dolor, aliquam eget suscipit ac, dignissim at lectus. ")]
